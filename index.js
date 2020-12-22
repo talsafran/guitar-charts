@@ -20,8 +20,8 @@ const stringIntervals = [5, 5, 5, 4, 5, null]
 
 function drawChart() {
   const charts = document.querySelectorAll('.chart')
-  for (let c of charts) {
-    let chart = new svguitar.SVGuitarChord(c)
+  for (let chartElement of charts) {
+    let chart = new svguitar.SVGuitarChord(chartElement)
 
     chart.chord(chordOptions)
     chart.configure(config)
