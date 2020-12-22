@@ -6,12 +6,14 @@ config = {
 
 const chordOptions = {
   fingers: [
-    [1, 2],
-    [2, 3],
-    [3, 3],
+    [1, 0],
+    [2, 1],
+    [3, 2],
+    [4, 2],
+    [5, 0],
   ],
   barres: [],
-  position: 2,
+  position: 0,
 }
 
 const stringIntervals = [5, 5, 5, 4, 5, null]
