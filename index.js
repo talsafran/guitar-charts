@@ -1,4 +1,4 @@
-NUMBER_OF_CHARTS = 4
+NUMBER_OF_CHARTS = 1
 
 config = {
   frets: 4
@@ -14,10 +14,12 @@ const chordOptions = {
   position: 2,
 }
 
+const stringIntervals = [5, 5, 5, 4, 5, null]
+
 function drawChart() {
-  for(index = 1; index <= NUMBER_OF_CHARTS; index++) {
-    let selector = `#chart-${index + 1}`
-    let chart = new svguitar.SVGuitarChord(selector)
+  const charts = document.querySelectorAll('.chart')
+  for (let c of charts) {
+    let chart = new svguitar.SVGuitarChord(c)
 
     chart.chord(chordOptions)
     chart.configure(config)
