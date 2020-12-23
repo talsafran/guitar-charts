@@ -1,7 +1,7 @@
 NUMBER_OF_CHARTS = 1
 
 config = {
-  frets: 12
+  frets: 14
 }
 
 const legacyChordOptions = {
