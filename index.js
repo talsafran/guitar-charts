@@ -66,7 +66,7 @@ function generateFingerings() {
 
     while (currentPosition <= config.frets) {
       const currentPositionIsVisible = currentPosition >= config.position
-      const shouldDraw = currentPosition && degreesToDraw.includes(currentScaleDegree)
+      const shouldDraw = currentPositionIsVisible && degreesToDraw.includes(currentScaleDegree)
 
       if (shouldDraw) {
         const styling = stylingForScaleDegree(currentScaleDegree)
