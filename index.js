@@ -34,6 +34,8 @@ const majorScaleIntervals = {
   7: 1,
 }
 
+const degreesToDraw = [1, 3, 5, 7]
+
 const startingString = 6
 const startingPosition = 3
 
@@ -63,7 +65,10 @@ function generateFingerings() {
     currentPosition = currentPosition - interval - 12
 
     while (currentPosition <= config.frets) {
-      if (currentPosition >= config.position) {
+      const currentPositionIsVisible = currentPosition >= config.position
+      const shouldDraw = currentPosition && degreesToDraw.includes(currentScaleDegree)
+
+      if (shouldDraw) {
         const styling = stylingForScaleDegree(currentScaleDegree)
 
         fingerings.push([stringNumber, currentPosition, styling])
