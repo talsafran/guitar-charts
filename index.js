@@ -5,7 +5,7 @@ const COLORS = {
 }
 
 const config = {
-  frets: 6,
+  frets: 12,
   position: 1
 }
 
