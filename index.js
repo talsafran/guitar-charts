@@ -75,12 +75,7 @@ function generateFingerings() {
       if (nextPosition > config.frets) break
 
       currentPosition = nextPosition
-
-      if (currentScaleDegree === 7) {
-        currentScaleDegree = 1
-      } else {
-        currentScaleDegree++
-      }
+      currentScaleDegree = nextScaleDegree(currentScaleDegree)
     }
   }
 
@@ -99,6 +94,14 @@ function colorForScaleDegree(scaleDegree) {
 
 function scaleDegreeLabel(scaleDegree) {
   return scaleDegree.toString()
+}
+
+function nextScaleDegree(scaleDegree) {
+  if (scaleDegree === 7) {
+    return scaleDegree = 1
+  } else {
+    return scaleDegree + 1
+  }
 }
 
 function stylingForScaleDegree(scaleDegree) {
