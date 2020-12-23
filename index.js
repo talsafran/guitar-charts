@@ -101,11 +101,7 @@ function colorForScaleDegree(scaleDegree) {
 }
 
 function scaleDegreeLabel(scaleDegree) {
-  if (scaleDegree === 1) {
-    return 'R'
-  } else {
-    return scaleDegree.toString()
-  }
+  return scaleDegree.toString()
 }
 
 (function() {
