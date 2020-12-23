@@ -1,0 +1,13 @@
+.charts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.chart {
+  display: inline-block;
+  width: 400px;
+  transform: rotate(-90deg);
+}
