@@ -1,7 +1,13 @@
 NUMBER_OF_CHARTS = 1
 
+const COLORS = {
+  root: '#000',
+  important: '#333',
+  others: '#ccc',
+}
+
 config = {
-  frets: 14,
+  frets: 6,
   position: 1
 }
 
@@ -42,8 +48,6 @@ function drawChart() {
     let fingerOptions = generateFingerings()
     let chordOptions = {...defaultChordOptions, ...fingerOptions}
 
-    // debugger
-
     chart.chord(chordOptions)
     chart.configure(config)
     chart.draw()
@@ -62,10 +66,13 @@ function generateFingerings() {
 
     while (currentPosition <= config.frets) {
       if (currentPosition >= config.position) {
-        fingerings.push([stringNumber, currentPosition, currentScaleDegree.toString()])
-      }
+        const styling = {
+          color: colorForScaleDegree(currentScaleDegree),
+          text: scaleDegreeLabel(currentScaleDegree),
+        }
 
-      // debugger
+        fingerings.push([stringNumber, currentPosition, styling])
+      }
 
       const nextPosition = currentPosition + majorScaleIntervals[currentScaleDegree]
       if (nextPosition > config.frets) break
@@ -78,10 +85,27 @@ function generateFingerings() {
         currentScaleDegree++
       }
     }
-    // console.log('string, interval', stringNumber, interval)
   }
 
   return { fingers: fingerings }
+}
+
+function colorForScaleDegree(scaleDegree) {
+  if (scaleDegree === 1) {
+    return COLORS.root
+  } else if ([3, 5].includes(scaleDegree)) {
+    return COLORS.important
+  } else {
+    return COLORS.others
+  }
+}
+
+function scaleDegreeLabel(scaleDegree) {
+  if (scaleDegree === 1) {
+    return 'R'
+  } else {
+    return scaleDegree.toString()
+  }
 }
 
 (function() {
