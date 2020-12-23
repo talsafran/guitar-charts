@@ -1,10 +1,10 @@
 NUMBER_OF_CHARTS = 1
 
 config = {
-  frets: 4
+  frets: 12
 }
 
-const chordOptions = {
+const legacyChordOptions = {
   fingers: [
     [1, 0],
     [2, 1],
@@ -16,14 +16,29 @@ const chordOptions = {
   position: 0,
 }
 
-const stringIntervals = [5, 5, 5, 4, 5, null]
+const stringIntervals = {
+  6: 5,
+  5: 5,
+  4: 5,
+  3: 4,
+  2: 5,
+}
+
+const startingString = 5
+
+const startingFret = 2
+const endingFret = 14
+
+function chordOptions() {
+  const defaultOptions = { barres: [] }
+}
 
 function drawChart() {
   const charts = document.querySelectorAll('.chart')
   for (let chartElement of charts) {
     let chart = new svguitar.SVGuitarChord(chartElement)
 
-    chart.chord(chordOptions)
+    chart.chord(legacyChordOptions)
     chart.configure(config)
     chart.draw()
   }
