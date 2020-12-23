@@ -6,7 +6,7 @@ const COLORS = {
 
 const config = {
   frets: 12,
-  position: 1
+  position: 1,
 }
 
 const defaultChordOptions = {
@@ -21,7 +21,7 @@ const stringIntervals = [
   [4, 5],
   [3, 5],
   [2, 4],
-  [1, 5]
+  [1, 5],
 ]
 
 const majorScaleIntervals = {
