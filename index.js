@@ -66,10 +66,7 @@ function generateFingerings() {
 
     while (currentPosition <= config.frets) {
       if (currentPosition >= config.position) {
-        const styling = {
-          color: colorForScaleDegree(currentScaleDegree),
-          text: scaleDegreeLabel(currentScaleDegree),
-        }
+        const styling = stylingForScaleDegree(currentScaleDegree)
 
         fingerings.push([stringNumber, currentPosition, styling])
       }
@@ -102,6 +99,13 @@ function colorForScaleDegree(scaleDegree) {
 
 function scaleDegreeLabel(scaleDegree) {
   return scaleDegree.toString()
+}
+
+function stylingForScaleDegree(scaleDegree) {
+  return {
+    color: colorForScaleDegree(scaleDegree),
+    text: scaleDegreeLabel(scaleDegree),
+  }
 }
 
 (function() {
