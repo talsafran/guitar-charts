@@ -1,5 +1,3 @@
-NUMBER_OF_CHARTS = 1
-
 const COLORS = {
   root: '#000',
   important: '#333',
