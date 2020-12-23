@@ -21,7 +21,6 @@ Just clone the repo, copy the path of the index.html file and visit it locally:
 ❯ pwd
 /Users/talsafran/Projects/guitar-charts
 
-~/Projects/guitar-charts master*
 ❯ open index.html
 ```
 
