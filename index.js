@@ -6,7 +6,7 @@ const COLORS = {
   others: '#ccc',
 }
 
-config = {
+const config = {
   frets: 6,
   position: 1
 }
