@@ -1,8 +1,7 @@
 <p align="center">
   <h2 align="center">🎸📈<br></h2>
 
-  <img width="1552" alt="image" src="https://user-images.githubusercontent.com/257028/102995503-de456e80-4529-11eb-83c0-3e1f30f225d1.png">
-
+  <img width="1552" alt="image" src="https://user-images.githubusercontent.com/257028/102995842-9246f980-452a-11eb-9efb-ed9b7eafa94d.png">
 </p>
 
 <br>
@@ -13,9 +12,12 @@ Guitar chart generator, based on [svguitar](https://github.com/omnibrain/svguita
 
 There's no web server yet 😃
 
-Just copy the path of the index.html file and visit it locally:
+Just clone the repo, copy the path of the index.html file and visit it locally:
 
 ```
+❯ git clone git@github.com:talsafran/guitar-charts.git
+❯ cd guitar-charts
+
 ❯ pwd
 /Users/talsafran/Projects/guitar-charts
 
