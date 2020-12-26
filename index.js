@@ -9,6 +9,8 @@ const COLORS = {
 const config = {
   frets: 12,
   position: 1,
+  title: 'Gmaj7',
+  titleFontSize: 36,
 }
 
 const defaultChordOptions = {
