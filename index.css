@@ -1,13 +1,16 @@
-.charts {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.chart {
-  display: inline-block;
-  width: 400px;
-  transform: rotate(-90deg);
+.charts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  padding: 2%;
+}
+
+.chart > svg {
+  width: 100%;
+  height: 100%;
 }
