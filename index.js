@@ -1,3 +1,5 @@
+const CHART_ELEMENT_SELECTOR = '.chart'
+
 const COLORS = {
   root: '#000',
   important: '#333',
@@ -40,7 +42,7 @@ const startingString = 6
 const startingPosition = 3
 
 function drawChart() {
-  const charts = document.querySelectorAll('.chart')
+  const charts = document.querySelectorAll(CHART_ELEMENT_SELECTOR)
 
   for (let chartElement of charts) {
     let chart = new svguitar.SVGuitarChord(chartElement)
