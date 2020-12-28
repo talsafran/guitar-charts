@@ -10,6 +10,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
+    "build": "webpack",
     "start": "webpack serve",
     "test": "test"
   },
