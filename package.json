@@ -1,0 +1,21 @@
+{
+  "name": "guitar-charts",
+  "version": "1.0.0",
+  "description": "🎸📈",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talsafran/guitar-charts.git"
+  },
+  "author": "Tal Safran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talsafran/guitar-charts/issues"
+  },
+  "homepage": "https://github.com/talsafran/guitar-charts#readme"
+}
