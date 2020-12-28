@@ -9,7 +9,6 @@ const COLORS = {
 const CONFIG = {
   frets: 12,
   position: 1,
-  title: 'Gmaj7',
   titleFontSize: 36,
 }
 
@@ -38,6 +37,29 @@ const MAJOR_SCALE_INTERVALS = {
   7: 1,
 }
 
+const CHORDS = [
+  {
+    title: 'Fmaj7',
+    root: 'F',
+    notes: ['1', '3', '5', '7']
+  },
+  {
+    title: 'F#o7',
+    root: 'F#',
+    notes: ['1', 'b3', 'b5', 'b7']
+  },
+  {
+    title: 'Gm7',
+    root: 'G',
+    notes: ['1', 'b3', '5', '7']
+  },
+  {
+    title: 'C7',
+    root: 'C',
+    notes: ['1', '3', '5', 'b7']
+  }
+]
+
 const DEGREES_TO_DRAW = [1, 3, 5, 7]
 
 const STARTING_STRING = 6
@@ -50,10 +72,15 @@ function drawChart() {
     let chart = new svguitar.SVGuitarChord(chartElement)
 
     let fingerOptions = generateFingerings()
+    let chordName = chartElement.getAttribute('chord')
+    let chord = CHORDS.find(chord => chord.title == chordName)
+    if (!chord) break
     let chordOptions = {...DEFAULT_CHORD_OPTIONS, ...fingerOptions}
 
+    let titleConfiguration = { title: chord.title }
+
     chart.chord(chordOptions)
-    chart.configure(CONFIG)
+    chart.configure({...CONFIG, ...titleConfiguration})
     chart.draw()
   }
 }
