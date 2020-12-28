@@ -5,5 +5,4 @@ _site
 .bundle
 bin/
 vendor/
-node_module/*/*/bin/
-node_modules/.bin/
+node_modules/
