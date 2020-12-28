@@ -4,7 +4,9 @@
   "description": "🎸📈",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^5.11.1"
+  },
   "scripts": {
     "test": "test"
   },
